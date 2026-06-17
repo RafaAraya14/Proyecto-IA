@@ -141,14 +141,14 @@ def funcion_objetivo(trial):
         return perdida_promedio, qwk_val
 
     # guarda pesos y curva de loss del trial
-    ruta_guardado = RAIZ_PROYECTO / f"modelo_efficientnet_lr_{lr_sugerido:.6f}.pth"
+    ruta_guardado = RAIZ_PROYECTO / f"models/modelo_efficientnet_lr_{lr_sugerido:.6f}.pth"
     torch.save(modelo.state_dict(), str(ruta_guardado))
     print(f"Modelo guardado en: {ruta_guardado}")
 
-    np.save(RAIZ_PROYECTO / f"historial_loss_{lr_sugerido:.6f}.npy", np.array(historial_loss))
+    np.save(RAIZ_PROYECTO / f"models/historial_loss_{lr_sugerido:.6f}.npy", np.array(historial_loss))
 
     resultado_validacion = None
-    ruta_metrics = RAIZ_PROYECTO / "data" / f"metrics_lr_{lr_sugerido:.6f}.json"
+    ruta_metrics = RAIZ_PROYECTO / "models" / f"metrics_lr_{lr_sugerido:.6f}.json"
     try:
         if RUTA_MANIFIESTO_VAL.exists():
             dataloader_val = construir_dataloader_wsi(

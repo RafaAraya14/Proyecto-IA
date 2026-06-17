@@ -1,0 +1,24 @@
+# Procesamiento de datos y visualización
+numpy==1.26.4
+pandas
+matplotlib
+Pillow
+
+# Procesamiento de imágenes médicas (WSI)
+tifffile
+openslide-python
+imagecodecs
+
+# Deep Learning y Utilidades
+torch
+torchvision
+timm
+
+# Machine Learning y Métricas
+scikit-learn
+
+# Optimización y Aumentación
+optuna
+albumentations
+
+grad-cam

@@ -61,7 +61,7 @@ def probar_grad_cam():
     plt.imshow(visualizacion)
     plt.title("Grad-CAM: Explicabilidad del Agente (ISUP 5)")
     plt.axis("off")
-    ruta_salida = RAIZ_PROYECTO / "mapa_calor_prueba.png"
+    ruta_salida = RAIZ_PROYECTO / "models" / "mapa_calor_prueba.png"
     plt.savefig(str(ruta_salida), bbox_inches="tight")
 
     print(f"----------Mapa de calor generado: {ruta_salida}----------")

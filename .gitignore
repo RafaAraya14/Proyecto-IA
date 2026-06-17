@@ -1,0 +1,31 @@
+# --- Entornos Virtuales ---
+venv/
+.venv/
+venv/
+env/
+.env/
+
+# --- Imágenes y Datos (Evitar subir archivos pesados) ---
+data/train_images/
+data/train_label_masks/
+*.tiff
+*.svs
+
+# --- Artefactos y Manifestos ---
+manifests/
+splits/
+*.csv
+!train.csv  # Si quieres conservar tu CSV original, quita el ! y deja solo *.csv
+
+# --- Resultados de Entrenamiento y Modelos ---
+*.pth
+*.npy
+*.json
+resultados_finales_etapa2.csv
+
+# --- Archivos de sistema y configuraciones de VS Code ---
+.vscode/
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db

@@ -6,7 +6,7 @@ from .dataset_wsi import construir_dataloader_wsi, construir_manifiesto_tiles, c
 from .particion_pacientes import guardar_particiones_paciente
 
 RAIZ_PROYECTO = Path(__file__).resolve().parent.parent
-DIRECTORIO_DATOS = RAIZ_PROYECTO / "data"
+DIRECTORIO_DATOS = RAIZ_PROYECTO / "./data"
 
 
 def construir_ruta_archivo(directorio_base: str | Path, nombre_archivo: str) -> Path:
